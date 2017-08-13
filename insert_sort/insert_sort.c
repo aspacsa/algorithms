@@ -17,8 +17,8 @@ void insert(int *array, int position, int value) {
 }
 
 void sort(int *array, int size) {
-    for (int i = 1; i < size; i++)
-        insert(array, i, array[i]);
+    for (int index = 1; index < size; index++)
+        insert(array, index, array[index]);
 }
 
 
@@ -27,6 +27,7 @@ int main(void) {
     int size = sizeof(unsorted_array) / sizeof(unsorted_array[0]);
     sort(unsorted_array, size);
     
+    printf("New sorted array:\n");
     for (int i = 0; i < size; i++)
         printf("array[%i] = %i\n", i, unsorted_array[i]);
 
